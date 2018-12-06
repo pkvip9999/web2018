@@ -1,4 +1,26 @@
 @import "bootstrap";
-
-
-
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+#header{
+  background: #f7f7f7;
+  display: flex;
+}
+#login{
+  //height: 53px;
+  //display: flex;
+}
+#menu-top{
+  display: flex;
+  background: #fff;
+  width: 100%;
+}
+.header{
+  height: 205px;
+  display: flex;
+  //flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
