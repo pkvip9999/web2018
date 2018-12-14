@@ -12,8 +12,8 @@ Thời gian thực hiện <3 ngày
 
 [Tài liệu]( https://drive.google.com/drive/folders/1wH8N1DJ_UX2cE1eKO2FAwtBmSWDL0Fla?usp=sharing)
 
-[Home](https://pkvip9999.github.io/web2018/dist/home.html)
+[Home](https://pkvip9999.github.io/web2018/app/home.html)
 
-[Detail](https://pkvip9999.github.io/web2018/dist/details.html)
+[Detail](https://pkvip9999.github.io/web2018/app/details.html)
 
-[Contact](https://pkvip9999.github.io/web2018/dist/contact.html)
+[Contact](https://pkvip9999.github.io/web2018/app/contact.html)
