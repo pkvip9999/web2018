@@ -8,8 +8,12 @@ Cắt psd thành các thành phần sau này sẽ được đưa vào web : ản
 Sau khi xong up lên github repo tên web2018
 Thời gian thực hiện <3 ngày
 
-##Liên kết
+## Liên kết
 
 [Tài liệu]( https://drive.google.com/drive/folders/1wH8N1DJ_UX2cE1eKO2FAwtBmSWDL0Fla?usp=sharing)
 
-[dao diện](https://pkvip9999.github.io/web2018/app/home.html)
+[Home](https://pkvip9999.github.io/web2018/app/home.html)
+
+[Detail](https://pkvip9999.github.io/web2018/app/details.html)
+
+[Contact](https://pkvip9999.github.io/web2018/app/contact.html)

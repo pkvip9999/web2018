@@ -107,6 +107,7 @@ input:focus{
 .icon-pen{
   @include size(16px);
   background: #909090;
+  margin-right: 10px;
   mask: url("../imgs/pen.svg") center center no-repeat;
   -webkit-mask: url("../imgs/pen.svg")center center no-repeat;
 }
@@ -115,7 +116,8 @@ input:focus{
   background: #222222;
   mask: url("../imgs/location.svg") center center no-repeat;
   -webkit-mask: url("../imgs/location.svg")center center no-repeat;
-}.icon-phone{
+}
+.icon-phone{
   @include size(25px);
   background: #222222;
   mask: url("../imgs/phone.svg") center center no-repeat;
@@ -325,6 +327,35 @@ input:focus{
     .icon-drop-menu:hover::after{
       background: #5bc98a !important;
     }
+    .f-drop-menu{
+      position: relative;
+      .drop-menu{
+        background: #ffffff;
+        border-radius: .25rem;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 10rem;
+        transform: translateY(-2em);
+        z-index: -1;
+        transition: all 0.3s ease;
+        li{
+          padding: 5px 10px;
+          background: #ffffff;
+          text-align: left;
+        }
+      }
+      &:hover{
+        .drop-menu{
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+          transform: translateY(0%);
+        }
+      }
+    }
   }
   .col-md-4{
     padding: 0;
@@ -434,6 +465,7 @@ input:focus{
   border-radius: 100%;
   border: 1px solid #e1e1e1;
   background: #ffffff;
+  transition: all .3s ease;
   z-index: 2;
 }
 
@@ -444,13 +476,15 @@ input:focus{
   -webkit-mask-image: url("../imgs/link.svg");
 }
 .links{
-  @include size(132px,32px);
+  @include size(0,32px);
   background: #ffffff;
   border: 1px solid #e1e1e1;
   border-top-right-radius: 35px;
   border-bottom-right-radius: 35px;
+  opacity: 0;
   padding: 0 15px 0 25px;
   position: absolute;
+  transition: all .3s ease;
   transform: translateX(23px);
   z-index: 1;
 }
@@ -465,6 +499,9 @@ input:focus{
       background: #ffffff;
     }
     .links{
+      @include size(132px,32px);
+      opacity: 1;
+      transition: all .3s ease;
       visibility: visible;
     }
   }

@@ -88,3 +88,5 @@
     #information .infor p:nth-child(2) {
       font-family: 'latoR';
       font-size: 15px; }
+  #information .pr-100 {
+    padding-right: 100px; }
