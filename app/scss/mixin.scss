@@ -1,0 +1,36 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin kmx($width, $height: $width) {
+  background: #5bc98a;
+  width: $width;
+  height: $height;
+  border-top-right-radius: 35px ;
+  border-bottom-right-radius: 35px;
+}
+@mixin fonts($font){
+  $url:"";
+  @if($font=='latoR'){
+    $url:"../fonts/Lato-Regular.ttf";
+  }
+  @else if($font=='latoI'){
+    $url:"../fonts/Lato-Italic.ttf";
+  }
+  @else if($font=='latoB'){
+    $url:"../fonts/Lato-Bold.ttf";
+  }
+  @else if($font=='rufinaB'){
+    $url:"../fonts/Rufina-Bold.ttf";
+  }
+  @else if($font=='rufinaR'){
+    $url:"../fonts/Rufina-Regular.ttf";
+  }
+  @else if($font=='openSans'){
+    $url:"../fonts/OpenSans-Regular.ttf";
+  }
+  @font-face {
+    font-family: $font;
+    src: url($url);
+  }
+}

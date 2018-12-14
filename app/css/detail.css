@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "latoR";
+  src: url("../fonts/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: "latoB";
+  src: url("../fonts/Lato-Bold.ttf"); }
+
+@font-face {
+  font-family: "latoI";
+  src: url("../fonts/Lato-Italic.ttf"); }
+
+@font-face {
+  font-family: "rufinaB";
+  src: url("../fonts/Rufina-Bold.ttf"); }
+
+@font-face {
+  font-family: "rufinaR";
+  src: url("../fonts/Rufina-Regular.ttf"); }
+
+.icon-replay {
+  width: 15px;
+  height: 11px;
+  background: #909090;
+  mask-image: url("../imgs/replay.svg");
+  -webkit-mask-image: url("../imgs/replay.svg"); }
+
+#title {
+  width: 100%;
+  height: 280px;
+  background: #d2d2d2; }
+  #title .blog-detail {
+    height: 120px;
+    background: #5bc98a;
+    border-top-right-radius: 135px;
+    border-bottom-right-radius: 135px;
+    color: #ffffff;
+    font-family: 'rufinaB';
+    font-size: 30px;
+    padding: 0 39px 0 19px; }
+
+#main-detail {
+  background: #f7f7f7;
+  padding-top: 80px; }
+  #main-detail .bg {
+    margin-bottom: 80px; }
+  #main-detail .hot-news-content p:nth-child(3) {
+    margin-bottom: 50px; }
+  #main-detail .hot-news-content .bg-icon-links {
+    margin-right: 140px; }
+  #main-detail .quote-detail {
+    width: 100%;
+    height: auto;
+    background: #f9f9f9;
+    font-family: 'rufinaB';
+    font-size: 15px;
+    margin-bottom: 30px;
+    padding: 40px 30px;
+    position: relative; }
+    #main-detail .quote-detail .icon-category {
+      top: 0;
+      left: 30px;
+      transform: translateY(-50%); }
+  #main-detail .icon-cmt, #main-detail .icon-like {
+    margin-right: 40px; }
+  #main-detail .list-tag-detail .btn-tag {
+    margin: 0 2px; }
+  #main-detail .list-tag-detail span {
+    margin-right: 14px; }
+  #main-detail .user .bg {
+    padding: 35px; }
+  #main-detail .user .avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 24px 0 0; }
+  #main-detail .user .links-user {
+    width: 100px; }
+  #main-detail .user-name a {
+    border-right: 1px solid #dedede;
+    color: #222222;
+    display: inline-block;
+    font-family: 'rufinaB';
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 20px;
+    padding-right: 20px; }
+  #main-detail .popular-post {
+    margin-bottom: 30px;
+    width: auto;
+    height: 28px;
+    color: #222222;
+    font-size: 24px;
+    line-height: 28px; }
+    #main-detail .popular-post::before {
+      width: 35px;
+      height: 28px; }
+  #main-detail .comment-detail .bg {
+    padding: 35px; }
+  #main-detail .comment-detail .avatar {
+    width: 86px;
+    height: 86px;
+    margin: 0 26px 0 0; }
+  #main-detail .comment-detail a {
+    border: none;
+    margin: 0;
+    padding: 0; }
+  #main-detail .comment-detail .user-name {
+    margin-bottom: 20px; }
+    #main-detail .comment-detail .user-name span {
+      font-family: 'latoI';
+      font-size: 14px; }
+  #main-detail .comment-detail .comment-detail-content {
+    margin-bottom: 20px; }
+  #main-detail .comment-detail .bg-icon-links {
+    width: 32px;
+    height: 32px; }
+  #main-detail .comment-detail .links {
+    width: auto;
+    height: 28px;
+    border: none;
+    background: #5bc98a;
+    font-family: 'latoR';
+    font-size: 12px;
+    padding: 0 11px 0 20px; }
+    #main-detail .comment-detail .links a {
+      color: #fff; }
+      #main-detail .comment-detail .links a p {
+        height: 28px;
+        line-height: 25px; }
+  #main-detail .comment-detail .hover-link:hover .icon-replay {
+    background: #ffffff; }
+  #main-detail .comment-detail .bd-cmt {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 30px; }
+  #main-detail .form-comment .bg {
+    padding: 35px; }
+  #main-detail .form-comment .arifuzzaman, #main-detail .form-comment .email {
+    width: 330px;
+    margin-bottom: 60px; }
+  #main-detail .form-comment .form-cmt-content {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    margin: 25px 0 35px 0; }

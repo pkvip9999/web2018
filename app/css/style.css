@@ -1444,7 +1444,10 @@ ul {
   padding: 0; }
 
 a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: #909090; }
+  a:hover {
+    color: #5bc98a; }
 
 input {
   border: none; }
@@ -1498,7 +1501,7 @@ input:focus, button:focus {
   -webkit-mask-image: url("../imgs/p.svg"); }
 
 .icon-instagram {
-  width: 12px;
+  width: 14px;
   height: 14px;
   background: #3f729b;
   mask-image: url("../imgs/instagram.svg");
@@ -1523,13 +1526,40 @@ input:focus, button:focus {
   -webkit-mask-image: url("../imgs/search.svg"); }
 
 .icon-email {
-  width: 17px;
+  width: 18px;
   height: 13px;
   background: #909090;
-  margin-right: 15px;
+  margin-right: 12px;
   mask: url("../imgs/email.svg") center center no-repeat;
-  -webkit-mask: url("../imgs/email.svg") center center no-repeat;
-  transform: translateY(1px); }
+  -webkit-mask: url("../imgs/email.svg") center center no-repeat; }
+
+.icon-pen {
+  width: 16px;
+  height: 16px;
+  background: #909090;
+  mask: url("../imgs/pen.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/pen.svg") center center no-repeat; }
+
+.icon-location {
+  width: 18px;
+  height: 25px;
+  background: #222222;
+  mask: url("../imgs/location.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/location.svg") center center no-repeat; }
+
+.icon-phone {
+  width: 25px;
+  height: 25px;
+  background: #222222;
+  mask: url("../imgs/phone.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/phone.svg") center center no-repeat; }
+
+.icon-email-l {
+  width: 26px;
+  height: 21px;
+  background: #222222;
+  mask: url("../imgs/email-l.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/email-l.svg") center center no-repeat; }
 
 .container {
   width: 100%;
@@ -1683,7 +1713,7 @@ input:focus, button:focus {
   -webkit-mask: url("../imgs/user.svg") center center no-repeat;
   mask: url("../imgs/user.svg") center center no-repeat;
   margin-right: 10px;
-  transform: translateY(3px); }
+  transform: translateY(2px); }
 
 .icon-lock::before {
   background: #909090;
@@ -1814,9 +1844,10 @@ input:focus, button:focus {
 .bg-icon-links {
   width: 36px;
   height: 36px;
-  background: #5bc98a;
+  box-shadow: none;
   border-radius: 100%;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e1e1e1;
+  background: #ffffff;
   z-index: 2; }
 
 .icon-links {
@@ -1837,6 +1868,23 @@ input:focus, button:focus {
   position: absolute;
   transform: translateX(23px);
   z-index: 1; }
+
+.hover-link:hover .bg-icon-links {
+  background: #5bc98a;
+  border: none;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); }
+
+.hover-link:hover .icon-links {
+  background: #ffffff; }
+
+.hover-link:hover .links {
+  visibility: visible; }
+
+.icon-links {
+  background: #909090; }
+
+.links {
+  visibility: hidden; }
 
 .kmt-l {
   width: 0;
@@ -1959,29 +2007,14 @@ input:focus, button:focus {
     margin-bottom: 30px; }
   .post-content .btn-rm {
     margin-right: 25px; }
-  .post-content .bg-icon-links {
-    border: 1px solid #e1e1e1;
-    background: #ffffff;
-    box-shadow: none;
-    margin-right: 25px; }
-  .post-content .icon-links {
-    background: #909090; }
-  .post-content .links {
-    visibility: hidden; }
-  .post-content .bg-icon-links:hover {
-    background: #5bc98a;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); }
-    .post-content .bg-icon-links:hover .icon-links {
-      background: #ffffff; }
-    .post-content .bg-icon-links:hover .links {
-      visibility: visible; }
   .post-content span {
     font-family: 'latoR';
     font-size: 13px;
     line-height: 36px; }
-  .post-content .icon-cmt {
-    margin-right: 25px; }
-  .post-content .icon-cmt::before, .post-content .icon-like::before {
+
+.icon-cmt, .icon-like {
+  margin: 0 25px; }
+  .icon-cmt::before, .icon-like::before {
     width: 14px;
     height: 12px;
     content: '';
@@ -1990,7 +2023,10 @@ input:focus, button:focus {
     margin-right: 4px;
     mask: url("../imgs/cmt.svg") center center no-repeat;
     -webkit-mask: url("../imgs/cmt.svg") center center no-repeat; }
-  .post-content .icon-like::before {
+
+.icon-like {
+  margin: 0; }
+  .icon-like::before {
     mask: url("../imgs/heart.svg") center center no-repeat;
     -webkit-mask: url("../imgs/heart.svg") center center no-repeat; }
 
@@ -2024,19 +2060,6 @@ input:focus, button:focus {
   content: '';
   margin-right: 9px; }
 
-.about-me .avatar {
-  width: 150px;
-  height: 150px;
-  background: #f7f7f7;
-  border-radius: 100%;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 32px; }
-  .about-me .avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    object-fit: cover; }
-
 .about-me .introduce {
   text-align: center;
   margin-top: 30px;
@@ -2053,6 +2076,19 @@ input:focus, button:focus {
   font-size: 15px;
   margin-bottom: 30px; }
 
+.avatar {
+  width: 150px;
+  height: 150px;
+  background: #f7f7f7;
+  border-radius: 100%;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 32px; }
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover; }
+
 .connect-with .icons {
   margin-top: 41px;
   margin-left: 35px; }
@@ -2068,18 +2104,60 @@ input:focus, button:focus {
   font-size: 12px;
   width: auto; }
 
-.connect-with .mau .bg-icon-links {
-  background: #5bafef;
+.connect-with .hover-link:hover .bg-icon-links {
   border: none;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 4; }
 
-.connect-with .mau .links {
-  background: #5bafef;
+.connect-with .hover-link:hover .links {
+  border: none;
+  visibility: visible;
   z-index: 3; }
 
-.connect-with .mau .icon-twitter {
+.connect-with .hover-link:nth-child(1):hover .bg-icon-links {
+  background: #4965a0; }
+
+.connect-with .hover-link:nth-child(1):hover .links {
+  background: #4965a0; }
+
+.connect-with .hover-link:nth-child(1):hover .icon-fb {
   background: #ffffff; }
+
+.connect-with .hover-link:nth-child(2):hover .bg-icon-links {
+  background: #5bafef; }
+
+.connect-with .hover-link:nth-child(2):hover .links {
+  background: #5bafef; }
+
+.connect-with .hover-link:nth-child(2):hover .icon-twitter {
+  background: #ffffff; }
+
+.connect-with .hover-link:nth-child(3):hover .bg-icon-links {
+  background: #dc4e41; }
+
+.connect-with .hover-link:nth-child(3):hover .links {
+  background: #dc4e41; }
+
+.connect-with .hover-link:nth-child(3):hover .icon-google-plus {
+  background: #ffffff; }
+
+.connect-with .hover-link:nth-child(4):hover .bg-icon-links {
+  background: #bd081c; }
+
+.connect-with .hover-link:nth-child(4):hover .links {
+  background: #bd081c; }
+
+.connect-with .hover-link:nth-child(4):hover .icon-pinterest {
+  background: #ffffff; }
+
+.connect-with .hover-link:nth-child(5):hover .bg-icon-links {
+  background: #3f729b; }
+
+.connect-with .hover-link:nth-child(5):hover .links {
+  background: #3f729b; }
+
+.connect-with .hover-link:nth-child(5):hover .icon-instagram {
+  background: #ffffff !important; }
 
 .connect-with .sidebar-content {
   padding-bottom: 35px; }
@@ -2203,6 +2281,23 @@ input:focus, button:focus {
   transform: translate(-50%, 50%);
   position: absolute; }
 
+.arifuzzaman, .email {
+  width: 442px;
+  height: 40px;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #dcdcdc; }
+  .arifuzzaman:hover, .email:hover {
+    border-bottom: 1px solid #5bc98a; }
+  .arifuzzaman input, .email input {
+    width: 100%;
+    height: 100%;
+    background: transparent; }
+    .arifuzzaman input::placeholder, .email input::placeholder {
+      font-family: 'latoR';
+      font-size: 15px; }
+  .arifuzzaman .icon-user, .email .icon-user {
+    margin-right: 3px; }
+
 footer .bg-d {
   background: #909090 !important; }
   footer .bg-d:hover {
@@ -2211,22 +2306,6 @@ footer .bg-d {
 footer .f-1 {
   background: #f1f1f1;
   padding: 63px 0 75px 0; }
-  footer .f-1 .arifuzzaman, footer .f-1 .email {
-    width: 442px;
-    height: 40px;
-    margin-bottom: 80px;
-    border-bottom: 1px solid #dcdcdc; }
-    footer .f-1 .arifuzzaman:hover, footer .f-1 .email:hover {
-      border-bottom: 1px solid #5bc98a; }
-    footer .f-1 .arifuzzaman input, footer .f-1 .email input {
-      width: 100%;
-      height: 100%;
-      background: transparent; }
-      footer .f-1 .arifuzzaman input::placeholder, footer .f-1 .email input::placeholder {
-        font-family: 'latoR';
-        font-size: 15px; }
-    footer .f-1 .arifuzzaman .icon-user, footer .f-1 .email .icon-user {
-      margin-right: 3px; }
   footer .f-1 #menu-bot {
     position: relative; }
     footer .f-1 #menu-bot .logo {
@@ -2234,6 +2313,8 @@ footer .f-1 {
       box-shadow: none; }
     footer .f-1 #menu-bot a {
       color: #909090; }
+      footer .f-1 #menu-bot a:hover {
+        color: #5bc98a; }
 
 footer .f-2 {
   background: #e9e9e9;

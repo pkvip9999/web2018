@@ -1,40 +1,5 @@
 @import "bootstrap";
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-@mixin kmx($width, $height: $width) {
-  background: #5bc98a;
-  width: $width;
-  height: $height;
-  border-top-right-radius: 35px ;
-  border-bottom-right-radius: 35px;
-}
-@mixin fonts($font){
-  $url:"";
-  @if($font=='latoR'){
-  $url:"../fonts/Lato-Regular.ttf";
-}
-  @else if($font=='latoI'){
-    $url:"../fonts/Lato-Italic.ttf";
-  }
-  @else if($font=='latoB'){
-    $url:"../fonts/Lato-Bold.ttf";
-  }
-  @else if($font=='rufinaB'){
-    $url:"../fonts/Rufina-Bold.ttf";
-  }
-  @else if($font=='rufinaR'){
-    $url:"../fonts/Rufina-Regular.ttf";
-  }
-  @else if($font=='openSans'){
-    $url:"../fonts/OpenSans-Regular.ttf";
-  }
-  @font-face {
-    font-family: $font;
-    src: url($url);
-  }
-}
+@import "mixin";
 @include fonts('latoR');
 @include fonts('latoB');
 @include fonts('latoI');
@@ -57,6 +22,10 @@ ul{
 }
 a{
   text-decoration: none !important;
+  color: #909090;
+  &:hover{
+    color: #5bc98a;
+  }
 }
 input{
   border: none;
@@ -108,7 +77,7 @@ input:focus{
   -webkit-mask-image: url("../imgs/p.svg");
 }
 .icon-instagram{
-  @include size(12px,14px);
+  @include size(14px);
   background: #3f729b;
   mask-image: url("../imgs/instagram.svg");
   -webkit-mask-image: url("../imgs/instagram.svg");
@@ -129,12 +98,33 @@ input:focus{
   -webkit-mask-image: url("../imgs/search.svg");
 }
 .icon-email{
-  @include size(17px,13px);
+  @include size(18px,13px);
   background: #909090;
-  margin-right: 15px;
+  margin-right: 12px;
   mask: url("../imgs/email.svg") center center no-repeat;
   -webkit-mask: url("../imgs/email.svg")center center no-repeat;
-  transform: translateY(1px);
+}
+.icon-pen{
+  @include size(16px);
+  background: #909090;
+  mask: url("../imgs/pen.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/pen.svg")center center no-repeat;
+}
+.icon-location{
+  @include size(18px,25px);
+  background: #222222;
+  mask: url("../imgs/location.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/location.svg")center center no-repeat;
+}.icon-phone{
+  @include size(25px);
+  background: #222222;
+  mask: url("../imgs/phone.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/phone.svg")center center no-repeat;
+}.icon-email-l{
+  @include size(26px,21px);
+  background: #222222;
+  mask: url("../imgs/email-l.svg") center center no-repeat;
+  -webkit-mask: url("../imgs/email-l.svg")center center no-repeat;
 }
 
 .container {
@@ -296,7 +286,7 @@ input:focus{
   -webkit-mask: url("../imgs/user.svg") center center no-repeat;
   mask: url("../imgs/user.svg") center center no-repeat;
   margin-right: 10px;
-  transform: translateY(3px);
+  transform: translateY(2px);
 }
 .icon-lock::before{
   @extend .icon-user::before;
@@ -440,11 +430,13 @@ input:focus{
 }
 .bg-icon-links{
   @include size(36px);
-  background: #5bc98a;
+  box-shadow: none;
   border-radius: 100%;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  border: 1px solid #e1e1e1;
+  background: #ffffff;
   z-index: 2;
 }
+
 .icon-links{
   @include size(16px,15px);
   background: #ffffff;
@@ -462,6 +454,28 @@ input:focus{
   transform: translateX(23px);
   z-index: 1;
 }
+.hover-link{
+  &:hover{
+    .bg-icon-links{
+      background: #5bc98a;
+      border: none;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    }
+    .icon-links{
+      background: #ffffff;
+    }
+    .links{
+      visibility: visible;
+    }
+  }
+}
+.icon-links{
+  background: #909090;
+}
+.links{
+  visibility: hidden;
+}
+
 .kmt-l{
   @include size(0);
   $w : width;
@@ -538,7 +552,6 @@ input:focus{
   line-height: 36px;
   font-family: 'rufinaB';
   font-size: 30px;
-
   margin-bottom: 50px;
 }
 .popular-post::before{
@@ -584,37 +597,15 @@ input:focus{
   .btn-rm{
     margin-right: 25px;
   }
-  .bg-icon-links{
-    border: 1px solid #e1e1e1;
-    background: #ffffff;
-    box-shadow: none;
-    margin-right: 25px;
-  }
-  .icon-links{
-    background: #909090;
-  }
-  .links{
-    visibility: hidden;
-  }
-  .bg-icon-links:hover{
-    background: #5bc98a;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    .icon-links{
-      background: #ffffff;
-    }
-    .links{
-      visibility: visible;
-    }
-  }
   span{
     font-family: 'latoR';
     font-size: 13px;
     line-height: 36px;
   }
-  .icon-cmt{
-    margin-right: 25px;
-  }
-  .icon-cmt::before{
+}
+.icon-cmt{
+  margin: 0 25px;
+  &::before{
     @include size(14px,12px);
     content: '';
     display: inline-block;
@@ -623,8 +614,12 @@ input:focus{
     mask: url("../imgs/cmt.svg") center center no-repeat;
     -webkit-mask: url("../imgs/cmt.svg") center center no-repeat;
   }
-  .icon-like::before{
-    @extend .icon-cmt::before;
+}
+
+.icon-like{
+  @extend .icon-cmt;
+  margin: 0;
+  &::before{
     mask: url("../imgs/heart.svg") center center no-repeat;
     -webkit-mask: url("../imgs/heart.svg") center center no-repeat;
   }
@@ -664,18 +659,6 @@ input:focus{
 
 }
 .about-me{
-  .avatar{
-    @include size(150px);
-    background: #f7f7f7;
-    border-radius: 100%;
-    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
-    margin-top: 32px;
-    img{
-      @include size(100%);
-      border-radius: 100%;
-      object-fit: cover;
-    }
-  }
   .introduce{
     text-align: center;
     margin-top: 30px;
@@ -691,6 +674,18 @@ input:focus{
     font-family: 'latoR';
     font-size: 15px;
     margin-bottom: 30px;
+  }
+}
+.avatar{
+  @include size(150px);
+  background: #f7f7f7;
+  border-radius: 100%;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+  margin-top: 32px;
+  img{
+    @include size(100%);
+    border-radius: 100%;
+    object-fit: cover;
   }
 }
 .connect-with{
@@ -711,22 +706,89 @@ input:focus{
       width: auto;
     }
   }
-  //mẫu
-  .mau{
-    .bg-icon-links{
-      background: #5bafef;
-      border: none;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-      z-index: 4;
-    }
-    .links{
-      background: #5bafef;
-      z-index: 3;
-    }
-    .icon-twitter{
-      background: #ffffff;
+  .hover-link{
+    &:hover{
+      .bg-icon-links{
+        border: none;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        z-index: 4;
+      }
+      .links{
+        border: none;
+        visibility: visible;
+        z-index: 3;
+      }
     }
   }
+  .hover-link:nth-child(1){
+    &:hover{
+      .bg-icon-links{
+        background: #4965a0;
+      }
+      .links{
+        background: #4965a0;
+      }
+      .icon-fb{
+        background: #ffffff;
+      }
+    }
+
+  }
+  .hover-link:nth-child(2){
+    &:hover{
+      .bg-icon-links{
+        background: #5bafef;
+      }
+      .links{
+        background: #5bafef;
+      }
+      .icon-twitter{
+        background: #ffffff;
+      }
+    }
+
+  }
+  .hover-link:nth-child(3){
+    &:hover{
+      .bg-icon-links{
+        background: #dc4e41;
+      }
+      .links{
+        background: #dc4e41;
+      }
+      .icon-google-plus{
+        background: #ffffff;
+      }
+    }
+
+  }
+  .hover-link:nth-child(4){
+    &:hover{
+      .bg-icon-links{
+        background: #bd081c;
+      }
+      .links{
+        background: #bd081c;
+      }
+      .icon-pinterest{
+        background: #ffffff;
+      }
+    }
+  }
+  .hover-link:nth-child(5){
+    &:hover{
+      .bg-icon-links{
+        background: #3f729b;
+      }
+      .links{
+        background: #3f729b;
+      }
+      .icon-instagram{
+        background: #ffffff !important;
+      }
+    }
+  }
+
   .sidebar-content{
     padding-bottom: 35px;
   }
@@ -876,7 +938,28 @@ input:focus{
 
 //style footer
 
-
+.arifuzzaman{
+  @include size(442px,40px);
+  margin-bottom: 80px;
+  border-bottom:1px solid #dcdcdc;
+  &:hover{
+    border-bottom: 1px solid #5bc98a;
+  }
+  input{
+    @include size(100%);
+    background: transparent;
+    &::placeholder{
+      font-family: 'latoR';
+      font-size: 15px;
+    }
+  }
+  .icon-user{
+    margin-right: 3px;
+  }
+}
+.email{
+  @extend  .arifuzzaman;
+}
 footer{
   .bg-d{
     background: #909090 !important;
@@ -887,29 +970,6 @@ footer{
   .f-1{
     background: #f1f1f1;
     padding: 63px 0 75px 0;
-    .arifuzzaman{
-      @include size(442px,40px);
-      margin-bottom: 80px;
-      border-bottom:1px solid #dcdcdc;
-      &:hover{
-        border-bottom: 1px solid #5bc98a;
-      }
-      input{
-        @include size(100%);
-        background: transparent;
-        &::placeholder{
-          font-family: 'latoR';
-          font-size: 15px;
-        }
-      }
-      .icon-user{
-        margin-right: 3px;
-      }
-
-    }
-    .email{
-      @extend  .arifuzzaman;
-    }
     #menu-bot{
       position: relative;
       .logo{
@@ -918,6 +978,9 @@ footer{
       }
       a{
         color: #909090;
+        &:hover{
+          color: #5bc98a;
+        }
       }
     }
   }
@@ -944,7 +1007,6 @@ footer{
     a{
       color: #5bc98a;
     }
-
   }
 }
 

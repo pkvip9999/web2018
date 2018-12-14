@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Detail</title>
     <!--build:css css/style.min.css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detail.css">
     <!-- endbuild -->
 </head>
 <body>
@@ -79,30 +80,15 @@
         </div>
     </div>
 </header>
-<section id="slide">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-
-            </div>
-            <div class="col-md-6">
-                <div class="content-slide">
-                    <div class="date-time-sidebar ">
-                        <p>John Doe&emsp;/&emsp;12 May 2015&emsp;/&emsp;25 Comments</p>
-                    </div>
-                    <div>
-                        <p class="td">Some Place You Need To Visit Before You Die</p>
-                        <p class="nd">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                            Ipsum has been the industry's standard dummy text ever since</p>
-                    </div>
-                    <button type="submit" class="btn-slide">Read more</button>
-                </div>
-            </div>
+<section id="title" class="d-flex align-items-center">
+    <div class="container d-flex">
+        <div class="blog-detail d-flex align-items-center">
+            BLOG DETAILS
         </div>
     </div>
 </section>
-<section id="main">
-    <div class="container pb-82">
+<section id="main-detail">
+    <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <div class="news">
@@ -110,16 +96,32 @@
                         <div class="hot-news-img">
                             <div class="icon-category-top d-flex justify-content-center align-items-center"><img
                                     src="imgs/img.svg" alt=""></div>
-                            <div class="hot-top"></div>
                         </div>
                         <div class="hot-news-content">
                             <p>Fashion&emsp;/&emsp;15 May 2015</p>
                             <p>Someone Smilling and Trying to Ride a Bike</p>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="d-flex flex-row">
-                                <button type="submit" class="btn-rm m">Read More</button>
+                                printer took a galley of type and scrambled it to make a type specimen book.
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid cum dicta
+                                maxime mollitia nisi obcaecati quae quas sapiente veritatis? Aspernatur dolore hic ipsum
+                                odit, placeat repellat repudiandae veritatis voluptatem?
+                            </p>
+                            <div class="quote-detail">
+                                <div class="icon-category d-flex justify-content-center align-items-center"><img
+                                        src="imgs/quote.svg" alt=""></div>
+                                <p>“It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                                    it has”</p>
+                            </div>
+                            <p class="mb-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque
+                                cum, distinctio eaque natus necessitatibus omnis perspiciatis placeat possimus
+                                praesentium qui ratione reiciendis rem reprehenderit similique, temporibus tenetur ullam
+                                veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cum debitis,
+                                dolor esse in molestiae neque non quae, quas, ratione repellendus sed voluptate? Dolorum
+                                eum maiores minima nam officiis ullam.</p>
+                            <div class="d-flex flex-row align-items-center">
                                 <div class="hover-link d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-links"></div>
@@ -139,234 +141,160 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular-post d-flex flex-row">
-                        POPULAR POST
-                    </div>
-                    <div class="list">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="news-img-album bg mb-60">
-                                    <div class="img-album">
-                                        <div class="img-post">
-                                            <div class="icon-category d-flex justify-content-center align-items-center">
-                                                <img src="imgs/album.svg" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class="bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
+                                <div class="d-flex flex-row w100 ">
+                                    <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
+                                    <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
+                                    <div class="list-tag-detail d-flex w100 flex-wrap">
+                                        <span>Tag:</span>
+                                        <div class="   ">
+                                            <button type="submit" class="btn-tag">Fashion</button>
+                                            <button type="submit" class="btn-tag">Blog</button>
+                                            <button type="submit" class="btn-tag">Travel</button>
+                                            <button type="submit" class="btn-tag">New</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="news-no-img bg mb-60">
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class="bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-img bg">
-                                    <div class="img-post">
-                                        <div class="icon-category d-flex justify-content-center align-items-center"><img
-                                                src="imgs/img.svg" alt=""></div>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class=" bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="news-video bg mb-60">
-                                    <div class="video">
-                                        <div class="icon-category d-flex justify-content-center align-items-center"><img
-                                                src="imgs/camera.svg" alt=""></div>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class=" bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-audio bg mb-60">
-                                    <div class="audio">
-                                        <div class="icon-category d-flex justify-content-center align-items-center"><img
-                                                src="imgs/music.svg" alt=""></div>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class=" bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-quote bg">
-                                    <div class="quote">
-                                        <div class="icon-category d-flex justify-content-center align-items-center"><img
-                                                src="imgs/quote.svg" alt=""></div>
-                                    </div>
-                                    <div class="post-content">
-                                        <p>Fashion&emsp;/&emsp;15 May 2015</p>
-                                        <p>Someone Smilling and Trying to Ride a Bike</p>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text.</p>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <button type="submit" class="btn-rm">Read More</button>
-                                            <div class="hover-link d-flex align-items-center">
-                                                <div class="bg-icon-links d-flex justify-content-center align-items-center">
-                                                    <div class="icon-links"></div>
-                                                </div>
-                                                <div class="links d-flex align-items-center justify-content-between">
-                                                    <a href="">
-                                                        <div class="icon-fb"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-twitter"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-google-plus"></div>
-                                                    </a>
-                                                    <a href="">
-                                                        <div class="icon-pinterest"></div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <a href=""><span class="icon-cmt d-flex align-items-center">12</span></a>
-                                            <a href=""><span class="icon-like d-flex align-items-center">23</span></a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="bg d-flex flex-row">
+                        <div class="h100">
+                            <div class="avatar">
+                                <img src="imgs/P_20180328_135838.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="user-name d-flex j">
+                                <a href="">ALEX HUNNY</a>
+                                <div class="d-flex justify-content-between align-content-center links-user">
+                                    <div class="icon-fb"></div>
+                                    <div class="icon-twitter"></div>
+                                    <div class="icon-google-plus"></div>
+                                    <div class="icon-pinterest"></div>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popular-post d-flex flex-row">
+                    COMMENT
+                </div>
+                <div class="comment-detail">
+                    <div class="bg">
+                        <ul>
+                            <li class="d-flex flex-row">
+                                <div class="h100">
+                                    <div class="avatar">
+                                        <img src="imgs/P_20180328_135838.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="bd-cmt">
+                                        <div class="user-name ">
+                                            <a href="">ALEX HUNNY</a><span>&emsp;/&ensp;15 May, 2015</span>
+                                        </div>
+                                        <div class="comment-detail-content">
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                                            </p>
+                                        </div>
+                                        <div class="hover-link d-flex align-items-center">
+                                            <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                                <div class="icon-replay"></div>
+                                            </div>
+                                            <div class="links">
+                                                <a href=""><p>Replay</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li class="d-flex flex-row">
+                                            <div class="h100">
+                                                <div class="avatar">
+                                                    <img src="imgs/P_20180328_135838.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="bd-cmt">
+                                                <div class="user-name ">
+                                                    <a href="">ALEX HUNNY</a><span>&emsp;/&ensp;15 May, 2015</span>
+                                                </div>
+                                                <div class="comment-detail-content">
+                                                    <p>
+                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                                                    </p>
+                                                </div>
+                                                <div class="hover-link d-flex align-items-center">
+                                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                                        <div class="icon-replay"></div>
+                                                    </div>
+                                                    <div class="links">
+                                                        <a href=""><p>Replay</p></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="d-flex flex-row">
+                                <div class="h100">
+                                    <div class="avatar">
+                                        <img src="imgs/P_20180328_135838.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="user-name ">
+                                        <a href="">ALEX HUNNY</a><span>&emsp;/&ensp;15 May, 2015</span>
+                                    </div>
+                                    <div class="comment-detail-content">
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                                        </p>
+                                    </div>
+                                    <div class="hover-link d-flex align-items-center">
+                                        <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                            <div class="icon-replay"></div>
+                                        </div>
+                                        <div class="links">
+                                            <a href=""><p>Replay</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popular-post d-flex flex-row">
+                    POST COMMENT
+                </div>
+                <div class="form-comment">
+                    <div class="bg">
+                        <form action="" method="post">
+                            <div class="d-flex justify-content-between flex-wrap">
+                                <div class="arifuzzaman d-flex align-items-center">
+                                    <div class="icon-user"></div>
+                                    <input type="text" placeholder="Arifuzzaman">
+                                </div>
+                                <div class="email d-flex align-items-center">
+                                    <div class="icon-email"></div>
+                                    <input type="text" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-pen"></div>Comment
+                            </div>
+                            <div class="form-cmt-content w100">
+                                <input type="text" class="w100 h100" placeholder="comment . . .">
+                            </div>
+
+                            <button type="submit" class="btn-sub">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -395,7 +323,7 @@
                         <div class="sidebar-content">
                             <p class="sidebar-title d-flex flex-row">connect with</p>
                             <div class="icons d-flex flex-row">
-                                <div class="icon hover-link mr-20 d-flex align-items-center">
+                                <div class="hover-link icon mr-20 d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-fb"></div>
                                     </div>
@@ -403,7 +331,7 @@
                                         1200 tweet
                                     </div>
                                 </div>
-                                <div class="icon hover-link mr-20 d-flex align-items-center">
+                                <div class="hover-link icon mau mr-20 d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-twitter"></div>
                                     </div>
@@ -411,7 +339,7 @@
                                         1200 tweet
                                     </div>
                                 </div>
-                                <div class="icon hover-link mr-20 d-flex align-items-center">
+                                <div class="hover-link icon mr-20 d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-google-plus"></div>
                                     </div>
@@ -419,15 +347,12 @@
                                         1200 tweet
                                     </div>
                                 </div>
-                                <div class="icon hover-link mr-20 d-flex align-items-center">
+                                <div class="hover-link icon mr-20 d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-pinterest"></div>
                                     </div>
-                                    <div class="links d-flex align-items-center justify-content-between">
-                                        1200 tweet
-                                    </div>
                                 </div>
-                                <div class="icon hover-link d-flex align-items-center">
+                                <div class="hover-link icon d-flex align-items-center">
                                     <div class="bg-icon-links d-flex justify-content-center align-items-center">
                                         <div class="icon-instagram"></div>
                                     </div>
@@ -554,28 +479,10 @@
                                 <button type="submit" class="btn-tag mrb-10">Travel</button>
                                 <button type="submit" class="btn-tag mrb-10">New</button>
                                 <button type="submit" class="btn-tag mrb-10">Template</button>
+
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="pagination d-flex align-items-center justify-content-between">
-                <ul class="d-flex">
-                    <li><a href=""><img src="imgs/prev.svg" alt=""></a></li>
-                    <li><a href="" class="menu-active">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-                <ul class="d-flex ">
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">6</a></li>
-                    <li><a href=""><img src="imgs/next.svg" alt=""></a></li>
-                </ul>
-                <div class="reload d-flex justify-content-center align-items-center">
-                    <img src="imgs/reload.svg" alt="">
                 </div>
             </div>
         </div>

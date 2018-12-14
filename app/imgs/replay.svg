@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+<svg xmlns="http://www.w3.org/2000/svg" width="14.563" height="11.94" viewBox="0 0 14.563 11.94">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,5 +27,13 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<image id="_" data-name="" width="14" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEU/cps/cps/cps/cps/cps/cps/cps/cps/cps/cps/cps/cps/cps/cpsAAACJZGstAAAADXRSTlMAIplmqt1V7nfMu4gR8VgftQAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDA4NEy4HllUVAAAAUklEQVQI12NgEAQBBgamuyCgwCALJC+ZXATTl5nBdCiEf40h/S6Q7pzAwDUDSJsC6WAgbX2NIXczkLaJDb16GEgbnJjZA9K3SElJSesi3FyoPQDhzSrZkmUtVwAAAABJRU5ErkJggg=="/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #909090;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Arrow_right" class="cls-1" d="M661.074,2539h-0.016a0.412,0.412,0,0,1-.395-0.41c-0.015-.16-0.483-4.16-6.854-4.15v2.55a0.44,0.44,0,0,1-.261.4,0.447,0.447,0,0,1-.483-0.05l-5.9-4.79a0.43,0.43,0,0,1,0-.68l5.9-4.74a0.469,0.469,0,0,1,.483-0.06,0.452,0.452,0,0,1,.26.4v2.5a8.016,8.016,0,0,1,6.031,2.44c2.16,2.47,1.678,6.06,1.655,6.21A0.423,0.423,0,0,1,661.074,2539Zm-7.72-5.46h0c4.551,0,6.291,1.51,7.284,2.83a6.5,6.5,0,0,0-1.493-3.39c-1.227-1.39-3.2-2.13-5.792-2.13a0.443,0.443,0,0,1-.455-0.44v-2l-4.726,3.8,4.726,3.84v-2.06a0.444,0.444,0,0,1,.133-0.32A0.477,0.477,0,0,1,653.354,2533.54Z" transform="translate(-647 -2527.06)"/>
 </svg>
