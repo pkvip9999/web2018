@@ -1455,6 +1455,11 @@ input {
 input:focus, button:focus {
   outline: none; }
 
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
 .bg {
   background: #ffffff;
   border: 1px solid #f3f3f3;
@@ -1917,33 +1922,6 @@ input:focus, button:focus {
 .links {
   visibility: hidden; }
 
-.kmt-l {
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-right: 770px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-.kmt-m {
-  width: 0;
-  height: 0;
-  border-top: 23px solid transparent;
-  border-right: 370px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
-.kmt-s {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-right: 370px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0; }
-
 .icon-category-top, .icon-category {
   width: 56px;
   height: 56px;
@@ -2067,7 +2045,14 @@ input:focus, button:focus {
 
 .quote {
   width: 100%;
-  height: 245px; }
+  height: 245px;
+  background: #696969; }
+  .quote p, .quote .login a, .login .quote a {
+    font-family: 'rufinaB';
+    color: #ffffff;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center; }
 
 .sidebar-content {
   background: #ffffff;

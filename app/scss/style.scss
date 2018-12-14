@@ -36,6 +36,12 @@ button:focus{
 input:focus{
   outline: none;
 }
+.img{
+  img{
+    @include size(100%);
+    object-fit: cover;
+  }
+}
 .bg{
   background: #ffffff;
   border: 1px solid #f3f3f3;
@@ -444,6 +450,7 @@ input:focus{
     background: #d2d2d2;
     position: relative;
     overflow: hidden;
+
     &:after{
       position: absolute;
       bottom: -50px;
@@ -513,31 +520,7 @@ input:focus{
   visibility: hidden;
 }
 
-.kmt-l{
-  @include size(0);
-  $w : width;
-  border-top: 30px solid transparent;
-  border-right: 770px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.kmt-m{
-  @include size(0);
-  border-top: 23px solid transparent;
-  border-right: 370px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.kmt-s{
-  @include size(0);
-  border-top: 20px solid transparent;
-  border-right: 370px solid #ffffff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
+
 .icon-category-top{
   @include size(56px);
   background: #5bc98a ;
@@ -663,6 +646,7 @@ input:focus{
 }
 .video{
   @extend .img-post;
+
 }
 .audio{
   @extend .img-post;
@@ -671,6 +655,14 @@ input:focus{
 .quote{
   @extend .img-post;
   @include size(100%,245px);
+  background: #696969;
+  p{
+    font-family: 'rufinaB';
+    color: #ffffff;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+  }
 }
 
 // style sidebar
