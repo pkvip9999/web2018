@@ -14,6 +14,7 @@ body{
 }
 body{
   color: #909090;
+  font-family: 'latoR';
 }
 ul{
   list-style: none;
@@ -162,40 +163,7 @@ input:focus{
 .h100{
   height: 100%;
 }
-.mt-45{
-  margin-top: 45px;
-}
-.mb-60{
-  margin-bottom: 60px;
-}
-.mb-30{
-  margin-bottom: 30px;
-}
-.mrb-10{
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-.mr-20{
-  margin-right: 20px;
-}
-.mr-32{
-  margin-right: 32px;
-}
-.ml-35{
-  margin-left: 35px;
-}
-.pb-82{
-  padding-bottom: 82px;
-}
-.pr-30{
-  padding-right: 30px;
-}
-.pl-30{
-  padding-left: 30px;
-}
-.m-15{
-  margin: 15px;
-}
+
 %btn {
   background: #ffffff;
   display: inline-block;
@@ -222,8 +190,8 @@ input:focus{
   @extend %btn;
   height: 28px;
   background: #f9f9f9;
-  font-family: 'latoR';
   font-size: 13px;
+  margin-bottom: 10px;
   padding: 0 15px 0 15px;
   &:hover{
     background: #5bc98a;
@@ -256,7 +224,6 @@ input:focus{
   border: 1px solid #e1e1e1;
   color: #222222;
   height: 36px;
-  font-family: 'latoR';
   font-size: 14px;
   padding-left:  22px;
   padding-right: 22px;
@@ -278,12 +245,16 @@ input:focus{
   height: 53px;
   p{
     line-height: 53px;
-    font-family: 'latoR';
     font-size: 14px;
   }
   a{
     @extend p;
     color: #909090;
+  }
+  .row{
+    div{
+      padding: 0 30px;
+    }
   }
 }
 .icon-user::before{
@@ -321,6 +292,9 @@ input:focus{
     }
     a:hover,a:active{
       color: #5bc98a;
+    }
+    li{
+      margin: 15px;
     }
     .icon-drop-menu::after{
       @include size(16px,10px);
@@ -429,7 +403,6 @@ input:focus{
   margin-bottom: 32px;
 }
 .nd{
-  font-family: 'latoR';
   font-size: 16px;text-align: start;
   height: 66px;
   line-height: 24px;
@@ -441,6 +414,9 @@ input:focus{
 #main{
   @extend #header;
   padding-top: 80px;
+  .container{
+    padding-bottom: 82px;
+  }
 
 }
 .hot-news{
@@ -561,7 +537,6 @@ input:focus{
     margin-bottom: 20px;
   }
   p:nth-child(3){
-    font-family: 'latoR';
     font-size: 15px;
     margin-bottom: 35px;
   }
@@ -579,7 +554,11 @@ input:focus{
   content: '';
   margin-right: 20px;
 }
-
+.list{
+  .bg{
+    margin-bottom: 60px;
+  }
+}
 .img-post{
   @include size(100%,245px);
   background: #d2d2d2;
@@ -610,7 +589,6 @@ input:focus{
     margin-bottom: 15px;
   }
   p:nth-child(3){
-    font-family: 'latoR';
     font-size: 15px;
     margin-bottom: 30px;
   }
@@ -618,7 +596,6 @@ input:focus{
     margin-right: 25px;
   }
   span{
-    font-family: 'latoR';
     font-size: 13px;
     line-height: 36px;
   }
@@ -666,7 +643,11 @@ input:focus{
 }
 
 // style sidebar
-
+.sidebar{
+  .bg{
+    margin-bottom: 30px;
+  }
+}
 .sidebar-content{
   background: #ffffff;
   padding-top: 30px;
@@ -700,7 +681,6 @@ input:focus{
     margin-bottom: 5px;
   }
   p:nth-child(2){
-    font-family: 'latoR';
     font-size: 15px;
     margin-bottom: 30px;
   }
@@ -720,17 +700,17 @@ input:focus{
 .connect-with{
   .icons{
     margin-top: 41px;
-    margin-left: 35px;
+    padding: 0 35px;
   }
   .icon{
     .bg-icon-links{
       background: #ffffff;
       border: 1px solid #e1e1e1;
       box-shadow: none;
+
     }
     .links{
       color: #ffffff;
-      font-family: 'latoR';
       font-size: 12px;
       width: auto;
     }
@@ -831,7 +811,6 @@ input:focus{
   }
   .category{
     padding: 0 30px 0 35px;
-    font-family: 'latoR';
 
   }
   a{
@@ -865,6 +844,10 @@ input:focus{
   }
   .posts{
     margin-top: 45px;
+    padding: 0 35px;
+  }
+  .post{
+    margin-bottom: 30px;
   }
   .img-recent-post{
     @include size(70px);
@@ -911,13 +894,20 @@ input:focus{
 
 }
 .instagram{
+  p{
+    margin-bottom: 15px;
+  }
   .img-instagram{
     @include size(75px);
     background: #d2d2d2;
+    margin-top: 30px;
     img{
       @include size(100%);
       object-fit: cover;
     }
+  }
+  .list-img{
+    padding: 0 35px 0 35px;
   }
 }
 .tag-cloud{
@@ -927,6 +917,7 @@ input:focus{
   }
   .list-tag{
     padding: 0 35px 0 25px;
+    margin-top: 45px;
   }
 }
 .pagination{
@@ -978,7 +969,6 @@ input:focus{
     @include size(100%);
     background: transparent;
     &::placeholder{
-      font-family: 'latoR';
       font-size: 15px;
     }
   }
