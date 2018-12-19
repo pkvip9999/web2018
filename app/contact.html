@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Contact</title>
-    <!--build:css css/style.min.css -->
+    <!--build:css css/contact.min.css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/reponsive.css">
     <!-- endbuild -->
 </head>
 <body>
@@ -16,10 +17,10 @@
     <div class="container header">
         <div class="login">
             <div class="row h100">
-                <div class="col-md-2 d-flex justify-content-center pl-30">
+                <div class="col-lg-2 d-flex justify-content-center ">
                     <p>Welcome to Mate blog</p>
                 </div>
-                <div class="offset-md-8 col-md-2 d-flex justify-content-around pr-30">
+                <div class="offset-lg-8 col-lg-2 d-flex justify-content-around ">
                     <a href="" class=" icon-user">Login</a>
                     <a href="" class="icon-lock">Register</a>
                 </div>
@@ -29,50 +30,52 @@
             <div class="logo d-flex justify-content-center align-items-center">
                 <a href=""><img src="imgs/logo.png" alt="logo"></a>
             </div>
-            <div class="menu  h100 d-flex align-items-center justify-content-between">
-                <ul class="col-md-4 d-flex align-items-center justify-content-between">
-                    <li><a href="" class="menu-active">home</a></li>
-                    <li class="f-drop-menu">
-                        <a href="" class="icon-drop-menu d-flex align-items-center">category</a>
-                        <ul class="drop-menu">
-                            <li><a href="">menu 1</a></li>
-                            <li><a href="">menu 2</a></li>
-                            <li><a href="">menu 3</a></li>
-                            <li><a href="">menu 4</a></li>
-                            <li><a href="">menu 5</a></li>
-                        </ul>
-                    </li>
-                    <li class="f-drop-menu">
-                        <a href="" class="icon-drop-menu d-flex align-items-center">pages</a>
-                        <ul class="drop-menu">
-                            <li><a href="">menu 1</a></li>
-                            <li><a href="">menu 2</a></li>
-                            <li><a href="">menu 3</a></li>
-                            <li><a href="">menu 4</a></li>
-                            <li><a href="">menu 5</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">contact</a></li>
-                </ul>
-                <div class="d-flex flex-row">
+            <div class="menu  h100 d-flex align-items-center justify-content-between" >
+                <div class="m-1">
+                    <ul>
+                        <li><a href="" class="menu-active">home</a></li>
+                        <li class="f-drop-menu">
+                            <a href="" class="icon-drop-menu d-flex align-items-center">category</a>
+                            <div class="drop-menu d-flex flex-column">
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                            </div>
+                        </li>
+                        <li class="f-drop-menu">
+                            <a href="" class="icon-drop-menu d-flex align-items-center">pages</a>
+                            <div class="drop-menu d-flex flex-column">
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                                <a href="">menu 1</a>
+                            </div>
+                        </li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </div>
+                <div class="m-2 d-flex flex-row ">
                     <ul class="d-flex align-items-center">
                         <a href="">
-                            <li class="icon-fb bg-d m-15"></li>
+                            <li class="icon-fb bg-d"></li>
                         </a>
                         <a href="">
-                            <li class="icon-twitter bg-d m-15"></li>
+                            <li class="icon-twitter bg-d"></li>
                         </a>
                         <a href="">
-                            <li class="icon-v bg-d m-15"></li>
+                            <li class="icon-v bg-d"></li>
                         </a>
                         <a href="">
-                            <li class="icon-google-plus bg-d m-15"></li>
+                            <li class="icon-google-plus bg-d"></li>
                         </a>
                         <a href="">
-                            <li class="icon-pinterest bg-d m-15"></li>
+                            <li class="icon-pinterest bg-d"></li>
                         </a>
                         <a href="">
-                            <li class="icon-wifi bg-d m-15"></li>
+                            <li class="icon-wifi bg-d"></li>
                         </a>
                     </ul>
                     <div class="d-flex flex-row">
@@ -85,6 +88,9 @@
                     </div>
                 </div>
             </div>
+            <button type="submit" class="btn-menu" onclick="menu()">
+                <div class="icon-menu"></div>
+            </button>
         </div>
     </div>
 </header>
@@ -98,12 +104,12 @@
 <section id="main-contact">
     <div class="container">
         <div class="row ac4">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 ">
                 <div class="map">
                     <img src="imgs/P_20180328_135838.jpg" alt="">
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-lg-6 ">
                 <div class="form-comment">
                     <div class="bg">
                         <div class="popular-post d-flex flex-row">
@@ -183,17 +189,20 @@
                 <button type="submit" class="btn-sub">Subscribe Now</button>
             </div>
             <div id="menu-bot">
-                <div class="logo d-flex justify-content-center align-items-center">
-                    <a href=""><img src="imgs/logo.png" alt="logo"></a>
-                </div>
-                <div class="menu  h100 d-flex align-items-center justify-content-between">
-                    <ul class="col-md-4 d-flex align-items-center justify-content-between">
-                        <li><a href="" class="menu-active">home</a></li>
-                        <li><a href="">fashion</a></li>
-                        <li><a href="">business</a></li>
-                        <li><a href="">sports</a></li>
-                        <li><a href="">contact</a></li>
-                    </ul>
+
+                <div class="menu">
+                    <div>
+                        <ul  >
+                            <li><a href="" class="menu-active">home</a></li>
+                            <li><a href="">fashion</a></li>
+                            <li><a href="">business</a></li>
+                            <li><a href="">sports</a></li>
+                            <li><a href="">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo d-flex justify-content-center align-items-center">
+                        <a href=""><img src="imgs/logo.png" alt="logo"></a>
+                    </div>
                     <div class="d-flex flex-row">
                         <ul class="d-flex align-items-center">
                             <a href="">

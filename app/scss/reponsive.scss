@@ -1,0 +1,131 @@
+@import "mixin";
+.icon-menu{
+  @include size(30px,30px);
+  background: #909090;
+  mask-image: url("../imgs/menu.svg");
+  -webkit-mask-image: url("../imgs/menu.svg");
+}
+.btn-menu{
+  display: none;
+  background: #ffffff;
+  border: 2px solid #f3f3f3;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  &:hover{
+    border-color: #5bc98a;
+    .icon-menu{
+      background: #5bc98a;
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .container{
+    padding: 0 10px;
+  }
+  .btn-menu{
+    display: inline-block;
+  }
+  body{
+    padding: 0 10px 0 10px;
+    background: #f7f7f7;
+  }
+  #header{
+    .container{
+      width: 100% !important;
+    }
+  }
+  .header{
+    height: auto;
+  }
+  #menu-top{
+    background: transparent;
+    border-radius: 0;
+    position: relative;
+
+  }
+  .login {
+    display: none;
+  }
+  .logo{
+    @include size(90px);
+    img{
+      @include size(100%);
+      object-fit: cover;
+    }
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .menu{
+    background: #ffffff;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    height: 280px;
+    width: 100%;
+    padding-top: 20px;
+
+  }
+  .m-1{
+    height: 100%;
+    background: #ffffff;
+    order: 2;
+    width: 100%;
+    ul{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+  .m-2{
+    order: 1;
+    ul{
+      display: none  !important;
+
+    }
+  }
+  #menu-bot{
+    display: flex;
+    flex-wrap: wrap;
+    .menu{
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      visibility: visible;
+      position: relative;
+    }
+    .logo{
+      position: unset;
+      top: unset;
+      left: unset;
+      transform: translate(0);
+    }
+  }
+
+  .icons{
+    width: 70%;
+  }
+  .list-tag{
+    width: 70%;
+  }
+  .img-instagram{
+    margin-right: 10px;
+  }
+
+  //details
+
+  .f-news{
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 575.98px) {
+  .content-slide{
+    padding: 20px 10px;
+  }
+}

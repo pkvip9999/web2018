@@ -77,15 +77,17 @@
     margin: 0 24px 0 0; }
   #main-detail .user .links-user {
     width: 100px; }
-  #main-detail .user-name a {
-    border-right: 1px solid #dedede;
-    color: #222222;
-    display: inline-block;
-    font-family: 'rufinaB';
-    font-size: 16px;
-    line-height: 16px;
-    margin-right: 20px;
-    padding-right: 20px; }
+  #main-detail .user-name {
+    margin-bottom: 10px; }
+    #main-detail .user-name a {
+      border-right: 1px solid #dedede;
+      color: #222222;
+      display: inline-block;
+      font-family: 'rufinaB';
+      font-size: 16px;
+      line-height: 16px;
+      margin-right: 20px;
+      padding-right: 20px; }
   #main-detail .popular-post {
     margin-bottom: 30px;
     width: auto;
