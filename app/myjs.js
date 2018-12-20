@@ -24,7 +24,6 @@ function currentSlide(n) {
 var w=0;
 function windowWidth() {
     w = window.innerWidth
-    // setTimeout(windowWidth,1000)
 }
 windowWidth();
 
@@ -68,31 +67,38 @@ function hover_link(x) {
 function leave(x) {
     x.parentElement.classList.remove('hover-link')
 }
-function dropMenu(x) {
-    if (w<1200){
-        x.children[1].classList.remove("display");
-        icon_exit[0].classList.remove('display')
-    }
-}
 function hiddenDropMenu() {
     for (i = 0; i< drop_menu.length; i++ ){
         drop_menu[i].classList.add('display')
     }
     icon_exit[0].classList.add('display')
 }
+function dropMenu(x) {
+    if (w<1200){
+        x.children[1].classList.remove("display");
+        icon_exit[0].classList.remove('display')
+    }
+}
+
 function reponsiveMenu() {
-    if(w<1200){
+    if(window.innerWidth<1200){
         for (i = 0; i< d_menu.length; i++ ){
             d_menu[i].classList.remove('d-menu')
             drop_menu[i].classList.add('display')
         }
     }
-    if(w>=1200){
+    if(window.innerWidth>=1200){
         for (i = 0; i< d_menu.length; i++ ){
             d_menu[i].classList.add('d-menu')
             drop_menu[i].classList.remove('display')
         }
     }
+    console.log('ok')
 }
 reponsiveMenu();
-console.log(window.screen)
+
+window.onresize = function() {
+    reponsiveMenu();
+    windowWidth();
+
+};
