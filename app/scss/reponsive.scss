@@ -1,9 +1,21 @@
 @import "mixin";
+
+
 .icon-menu{
   @include size(30px,30px);
   background: #909090;
   mask-image: url("../imgs/menu.svg");
   -webkit-mask-image: url("../imgs/menu.svg");
+}
+.icon-exit{
+  @include size(20px,20px);
+  background: #222222;
+  mask-image: url("../imgs/close-browser.svg");
+  -webkit-mask-image: url("../imgs/close-browser.svg");
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
 }
 .btn-menu{
   display: none;
@@ -21,9 +33,16 @@
     }
   }
 }
+.kmd-menu{
+  @include size(100%);
+  display: none;
+  position: fixed;
+  z-index: 500;
+  background: rgba(0,0,0,0.5);
+}
 @media (max-width: 1199.98px) {
-  .container{
-    padding: 0 10px;
+  .kmd-menu{
+    display: block;
   }
   .btn-menu{
     display: inline-block;
@@ -32,11 +51,7 @@
     padding: 0 10px 0 10px;
     background: #f7f7f7;
   }
-  #header{
-    .container{
-      width: 100% !important;
-    }
-  }
+
   .header{
     height: auto;
   }
@@ -64,13 +79,18 @@
     visibility: hidden;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
     z-index: 1000;
-    height: 280px;
-    width: 100%;
-    padding-top: 20px;
-
+    right: 0;
+    padding-top: 45px;
+    padding-left: 10px;
+    position: fixed;
+    width: 50%;
+    ul{
+      align-items: start!important;
+    }
+    li{
+      margin-top: 10px !important;
+    }
   }
   .m-1{
     height: 100%;
@@ -85,18 +105,29 @@
   }
   .m-2{
     order: 1;
+    width: 100%;
     ul{
       display: none  !important;
 
+    }
+  }
+  .text-search{
+    margin: 0;
+    order: 2;
+    input{
+      width: 100%;
     }
   }
   #menu-bot{
     display: flex;
     flex-wrap: wrap;
     .menu{
+      margin: 0 auto;
+      height: auto;
       background: transparent;
       display: flex;
       flex-direction: column;
+      padding-left: 0;
       visibility: visible;
       position: relative;
     }
@@ -105,6 +136,9 @@
       top: unset;
       left: unset;
       transform: translate(0);
+    }
+    .m-1{
+      display: none;
     }
   }
 
@@ -123,7 +157,27 @@
   .f-news{
     flex-wrap: wrap;
   }
+//  drop menu
+  .drop-menu{
+    @include size(50%,100%);
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
 }
+#slide{
+  .row{
+    margin: 0;
+  }
+  .col-sm-12{
+    padding: 0;
+  }
+
+}
+
 @media (max-width: 575.98px) {
   .content-slide{
     padding: 20px 10px;

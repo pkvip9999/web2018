@@ -2,7 +2,11 @@ var dots = document.getElementsByClassName('dot');
 var slides = document.getElementsByClassName('img-slide');
 var content = document.getElementsByClassName('content-slide');
 var album = document.getElementsByClassName('img-album');
-console.log(album);
+var kmd = document.getElementsByClassName('kmd-menu')[0];
+var menuTop = document.getElementsByClassName('menu')[0];
+var d_menu = document.getElementsByClassName('p-d-menu');
+var drop_menu = document.getElementsByClassName('drop-menu');
+var icon_exit = document.getElementsByClassName('icon-exit');
 var a = 0;
 var i;
 function currentSlide(n) {
@@ -17,7 +21,12 @@ function currentSlide(n) {
     content[n].classList.remove('display');
     dots[n].classList.add('active');
 }
-
+var w=0;
+function windowWidth() {
+    w = window.innerWidth
+    // setTimeout(windowWidth,1000)
+}
+windowWidth();
 
 function auto() {
 
@@ -45,9 +54,45 @@ function plusSlides(n) {
 }
 
 function menu() {
-    var menu = document.getElementsByClassName('menu')[0];
-    if(menu.style.visibility === 'visible'){
-        menu.style.visibility = 'hidden'
-    }
-    else menu.style.visibility = 'visible'
+    menuTop.style.visibility = 'visible';
+    kmd.classList.remove('display')
 }
+function hiddenMenu() {
+    menuTop.style.visibility = 'hidden';
+    kmd.classList.add('display')
+}
+function hover_link(x) {
+    x.parentElement.classList.add('hover-link')
+
+}
+function leave(x) {
+    x.parentElement.classList.remove('hover-link')
+}
+function dropMenu(x) {
+    if (w<1200){
+        x.children[1].classList.remove("display");
+        icon_exit[0].classList.remove('display')
+    }
+}
+function hiddenDropMenu() {
+    for (i = 0; i< drop_menu.length; i++ ){
+        drop_menu[i].classList.add('display')
+    }
+    icon_exit[0].classList.add('display')
+}
+function reponsiveMenu() {
+    if(w<1200){
+        for (i = 0; i< d_menu.length; i++ ){
+            d_menu[i].classList.remove('d-menu')
+            drop_menu[i].classList.add('display')
+        }
+    }
+    if(w>=1200){
+        for (i = 0; i< d_menu.length; i++ ){
+            d_menu[i].classList.add('d-menu')
+            drop_menu[i].classList.remove('display')
+        }
+    }
+}
+reponsiveMenu();
+console.log(window.screen)

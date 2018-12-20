@@ -12,6 +12,7 @@
     <!-- endbuild -->
 </head>
 <body>
+<div class="kmd-menu display" onclick="hiddenMenu()"></div>
 <header id="header">
     <div class="container header">
         <div class="login">
@@ -29,33 +30,27 @@
             <div class="logo d-flex justify-content-center align-items-center">
                 <a href=""><img src="imgs/logo.png" alt="logo"></a>
             </div>
-            <div class="menu  h100 d-flex align-items-center justify-content-between" >
+            <div class="menu  h100 d-flex align-items-center justify-content-between">
                 <div class="m-1">
                     <ul>
                         <li><a href="" class="menu-active">home</a></li>
-                        <li class="f-drop-menu">
-                            <a href="" class="icon-drop-menu d-flex align-items-center">category</a>
-                            <div class="drop-menu d-flex flex-column">
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
+                        <li class="p-d-menu" onclick="dropMenu(this)">
+                            <a href="#" class="icon-drop-menu d-flex align-items-center">category</a>
+                            <div class="drop-menu display">
+                                a
                             </div>
                         </li>
-                        <li class="f-drop-menu">
-                            <a href="" class="icon-drop-menu d-flex align-items-center">pages</a>
-                            <div class="drop-menu d-flex flex-column">
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
-                                <a href="">menu 1</a>
+                        <li class="p-d-menu" onclick="dropMenu(this)">
+                            <a href="#" class="icon-drop-menu d-flex align-items-center">pages</a>
+                            <div class="drop-menu display">
+                                b
                             </div>
                         </li>
                         <li><a href="">contact</a></li>
                     </ul>
+
                 </div>
+                <div class="icon-exit display" onclick="hiddenDropMenu()"></div>
                 <div class="m-2 d-flex flex-row ">
                     <ul class="d-flex align-items-center">
                         <a href="">
@@ -91,12 +86,13 @@
                 <div class="icon-menu"></div>
             </button>
         </div>
+
     </div>
 </header>
 <section id="slide">
     <div class="container h100">
         <div class="dots">
-            <span class="dot " onclick="currentSlide(0)" ></span>
+            <span class="dot " onclick="currentSlide(0)"></span>
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
         </div>
@@ -328,7 +324,10 @@
                                         <div class="icon-category d-flex justify-content-center align-items-center"><img
                                                 src="imgs/camera.svg" alt="">
                                         </div>
-                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NJ8U6TEO-qE?start=12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe width="100%" height="100%"
+                                                src="https://www.youtube.com/embed/NJ8U6TEO-qE?start=12" frameborder="0"
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
                                         <div class="kmt-l"></div>
                                     </div>
                                     <div class="post-content">
@@ -368,7 +367,8 @@
                                                 src="imgs/music.svg" alt="">
                                         </div>
                                         <audio controls>
-                                            <source src="audio/Big%20Big%20World%20-%20Trish%20Thuy%20Trang%20%5B320kbps_MP3%5D.mp3" type="audio/mpeg">
+                                            <source src="audio/Big%20Big%20World%20-%20Trish%20Thuy%20Trang%20%5B320kbps_MP3%5D.mp3"
+                                                    type="audio/mpeg">
                                             Your browser does not support the audio tag.
                                         </audio>
                                         <div class="kmt-l"></div>
@@ -411,7 +411,8 @@
                                                 src="imgs/quote.svg" alt="">
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center w100 h100 ">
-                                            <p>"Thưởng đẹp trai Thưởng đẹp trai Thưởng đẹp traiThưởng đẹp trai Thưởng đẹp trai Thưởng đẹp trai"</p>
+                                            <p>"Thưởng đẹp trai Thưởng đẹp trai Thưởng đẹp traiThưởng đẹp trai Thưởng
+                                                đẹp trai Thưởng đẹp trai"</p>
                                         </div>
                                         <div class="kmt-l"></div>
                                     </div>
@@ -476,8 +477,9 @@
                         <div class="sidebar-content">
                             <p class="sidebar-title d-flex flex-row">connect with</p>
                             <div class="icons d-flex justify-content-between w100">
-                                <div class="icon hover-link  d-flex align-items-center">
-                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                <div class="icon d-flex align-items-center">
+                                    <div class="bg-icon-links d-flex justify-content-center align-items-center"
+                                         onmouseover="hover_link(this)" onmouseout="leave(this)">
                                         <div class="icon-fb"></div>
                                     </div>
                                     <div class="links d-flex align-items-center justify-content-between">
@@ -485,7 +487,8 @@
                                     </div>
                                 </div>
                                 <div class="icon hover-link  d-flex align-items-center">
-                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                    <div class="bg-icon-links d-flex justify-content-center align-items-center"
+                                         onmouseover="hover_link(this)" onmouseout="leave(this)">
                                         <div class="icon-twitter"></div>
                                     </div>
                                     <div class="links d-flex align-items-center justify-content-between">
@@ -493,7 +496,8 @@
                                     </div>
                                 </div>
                                 <div class="icon hover-link d-flex align-items-center">
-                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                    <div class="bg-icon-links d-flex justify-content-center align-items-center"
+                                         onmouseover="hover_link(this)" onmouseout="leave(this)">
                                         <div class="icon-google-plus"></div>
                                     </div>
                                     <div class="links d-flex align-items-center justify-content-between">
@@ -501,7 +505,8 @@
                                     </div>
                                 </div>
                                 <div class="icon hover-link d-flex align-items-center">
-                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                    <div class="bg-icon-links d-flex justify-content-center align-items-center"
+                                         onmouseover="hover_link(this)" onmouseout="leave(this)">
                                         <div class="icon-pinterest"></div>
                                     </div>
                                     <div class="links d-flex align-items-center justify-content-between">
@@ -509,7 +514,8 @@
                                     </div>
                                 </div>
                                 <div class="icon hover-link d-flex align-items-center">
-                                    <div class="bg-icon-links d-flex justify-content-center align-items-center">
+                                    <div class="bg-icon-links d-flex justify-content-center align-items-center"
+                                         onmouseover="hover_link(this)" onmouseout="leave(this)">
                                         <div class="icon-instagram"></div>
                                     </div>
                                     <div class="links d-flex align-items-center justify-content-between">
@@ -676,8 +682,8 @@
             </div>
             <div id="menu-bot">
                 <div class="menu">
-                    <div>
-                        <ul  >
+                    <div class="m-1">
+                        <ul>
                             <li><a href="" class="menu-active">home</a></li>
                             <li><a href="">fashion</a></li>
                             <li><a href="">business</a></li>
