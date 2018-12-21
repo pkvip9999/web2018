@@ -89,7 +89,7 @@
       align-items: start!important;
     }
     li{
-      margin-top: 10px !important;
+      margin: 10px !important;
     }
   }
   .m-1{
@@ -106,6 +106,7 @@
   .m-2{
     order: 1;
     width: 100%;
+    margin-bottom: 10px;
     ul{
       display: none  !important;
 

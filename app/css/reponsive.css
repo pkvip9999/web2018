@@ -78,7 +78,7 @@
     .menu ul {
       align-items: start !important; }
     .menu li {
-      margin-top: 10px !important; }
+      margin: 10px !important; }
   .m-1 {
     height: 100%;
     background: #ffffff;
@@ -89,7 +89,8 @@
       flex-direction: column; }
   .m-2 {
     order: 1;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 10px; }
     .m-2 ul {
       display: none  !important; }
   .text-search {
